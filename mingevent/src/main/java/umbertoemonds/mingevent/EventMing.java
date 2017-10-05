@@ -23,7 +23,7 @@ public class EventMing {
         void onReceived(String identifier, @Nullable Bundle data);
     }
 
-    public static void sendNotification(@NonNull Context context, @NonNull String identifier, @NonNull Bundle data) {
+    public static void sendNotification(@NonNull Context context, @NonNull String identifier, @Nullable Bundle data) {
         Intent intent = new Intent(identifier);
         intent.putExtra("data", data);
         context.sendBroadcast(intent);
